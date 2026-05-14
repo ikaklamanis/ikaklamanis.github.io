@@ -1,0 +1,57 @@
+- year: 2026
+  sort_date: 2026-01-01
+  venue: In submission
+  title: "Censorship Resistance vs Throughput in Multi-Proposer BFT Protocols"
+  authors: "Fatima Elsheimy, **Ioannis Kaklamanis**, Sarisht Wadhwa, Charalampos Papamanthou, and Fan Zhang."
+  note: ""
+  links:
+    - label: eprint
+      icon: document-text
+      url: "https://eprint.iacr.org/2026/126"
+
+- year: 2025
+  sort_date: 2025-12-01
+  venue: In submission
+  title: "Verifiable Aggregate Receipts with Applications to User Engagement Auditing"
+  authors: "**Ioannis Kaklamanis**, Wenhao Wang, Harjasleen Malvai, and Fan Zhang."
+  note: ""
+  links:
+    - label: eprint
+      icon: document-text
+      url: "https://eprint.iacr.org/2025/2330"
+    - label: Project Homepage
+      icon: home
+      url: "https://var.hackingdecentralized.com/"
+
+- year: 2025
+  sort_date: 2025-04-01
+  venue: In submission
+  title: "Anonymous Self-Credentials and their Application to Single-Sign-On"
+  authors: "Jayamine Alupotha, Mariarosaria Barbaraci, **Ioannis Kaklamanis**, Abhimanyu Rawat, Christian Cachin, and Fan Zhang."
+  note: ""
+  links:
+    - label: eprint
+      icon: document-text
+      url: "https://eprint.iacr.org/2025/618"
+
+- year: 2025
+  sort_date: 2025-02-07
+  venue: In submission
+  title: "CRATE: Cross-Rollup Atomic Transaction Execution"
+  authors: "**Ioannis Kaklamanis** and Fan Zhang."
+  note: ""
+  links:
+    - label: arXiv
+      icon: document-text
+      url: "https://arxiv.org/abs/2502.04659"
+
+- year: 2022
+  sort_date: 2022-11-07
+  venue: CCS 2022
+  title: "Poster: Coded Broadcast for Scalable Leader-Based BFT Consensus"
+  authors: "**Ioannis Kaklamanis**, Lei Yang, and Mohammad Alizadeh."
+  note: "ACM SIGSAC Conference on Computer and Communications Security (CCS '22), 3375-3377."
+  links:
+    - label: ACM
+      icon: document-text
+      url: "https://doi.org/10.1145/3548606.3563494"

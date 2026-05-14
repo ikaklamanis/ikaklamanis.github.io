@@ -1,0 +1,67 @@
+<header class="academic-navbar">
+  <a class="academic-navbar__brand" href="{{ site.Home.RelPermalink }}">{{ site.Params.header.navbar.logo.text | default site.Title }}</a>
+
+  <nav class="academic-navbar__links" aria-label="Main navigation">
+    {{ range site.Menus.main }}
+      {{ $href := .URL }}
+      {{ if in $href "#" }}
+        {{ $anchor := index (last 1 (split $href "#")) 0 }}
+        <a href="#{{ $anchor }}" data-scroll-target="{{ $anchor }}">{{ .Name }}</a>
+      {{ else }}
+        <a href="{{ $href | relURL }}">{{ .Name }}</a>
+      {{ end }}
+    {{ end }}
+  </nav>
+
+  <button class="theme-toggle academic-navbar__theme" accesskey="t" aria-label="{{ i18n "theme_selector" }}">
+    <svg class="dark:hidden" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <svg class="dark:block [&:not(dark)]:hidden" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </button>
+</header>
+
+<script>
+  (function () {
+    function scrollToSection(id, updateHash) {
+      var target = document.getElementById(id);
+      if (!target) return;
+
+      var header = document.querySelector('.academic-navbar');
+      var headerHeight = header ? header.getBoundingClientRect().height : 0;
+      var top = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 12;
+
+      window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+
+      if (updateHash && window.location.hash !== '#' + id) {
+        history.pushState(null, '', '#' + id);
+      }
+    }
+
+    document.addEventListener('click', function (event) {
+      var link = event.target.closest('.academic-navbar__links a[data-scroll-target]');
+      if (!link) return;
+
+      event.preventDefault();
+      scrollToSection(link.getAttribute('data-scroll-target'), true);
+    });
+
+    window.addEventListener('load', function () {
+      if (window.location.hash.length > 1) {
+        window.requestAnimationFrame(function () {
+          scrollToSection(window.location.hash.slice(1), false);
+        });
+      }
+    });
+  })();
+</script>

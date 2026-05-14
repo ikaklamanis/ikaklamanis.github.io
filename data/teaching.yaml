@@ -1,0 +1,19 @@
+- role: Teaching Fellow
+  course: "Cryptography (CPSC 467)"
+  institution: Yale University
+  dates: "January-May 2025"
+
+- role: Teaching Fellow
+  course: "Blockchains (CPSC 364)"
+  institution: Yale University
+  dates: "September-December 2023"
+
+- role: Teaching Assistant
+  course: "Mathematics for Computer Science"
+  institution: Massachusetts Institute of Technology
+  dates: "January-May 2023"
+
+- role: Teaching Assistant
+  course: "Mathematics for Computer Science"
+  institution: Massachusetts Institute of Technology
+  dates: "September 2021-May 2022"

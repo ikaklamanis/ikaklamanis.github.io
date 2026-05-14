@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: May 7, 2025 --><html lang="en-us" dir="ltr"
+<!-- Last Published: May 14, 2026 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
 <head>
@@ -64,6 +64,9 @@
   
   
 
+  
+    
+    <link href="/css/custom.min.c8baf6b376a86b7909a95ecd8b47729d1d280d3a18037d2e778bbcdab34c161c.css" rel="stylesheet" />
   
 
   <script>
@@ -277,6 +280,78 @@
         
       
     
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
   
   
   
@@ -336,30 +411,100 @@
         
         
         
-          <div class="absolute right-0 top-0 m-3 bg-primary-100 dark:bg-primary-700 rounded-full p-2 z-10">
-  <div class="h-[24px] w-[24px]">
-    <button class="theme-toggle" accesskey="t" title="" aria-label="Display preferences">
-      <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-           fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-           stroke-linejoin="round" class="dark:hidden">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-      </svg>
-      <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-           fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-           stroke-linejoin="round" class=" dark:block [&:not(dark)]:hidden">
-        <circle cx="12" cy="12" r="5"></circle>
-        <line x1="12" y1="1" x2="12" y2="3"></line>
-        <line x1="12" y1="21" x2="12" y2="23"></line>
-        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-        <line x1="1" y1="12" x2="3" y2="12"></line>
-        <line x1="21" y1="12" x2="23" y2="12"></line>
-        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-      </svg>
-    </button>
-  </div>
-</div>
+          <header class="academic-navbar">
+  <a class="academic-navbar__brand" href="/">Ioannis Kaklamanis</a>
+
+  <nav class="academic-navbar__links" aria-label="Main navigation">
+    
+      
+      
+        <a href="/">Home</a>
+      
+    
+      
+      
+        
+        <a href="#publications" data-scroll-target="publications">Publications</a>
+      
+    
+      
+      
+        
+        <a href="#education" data-scroll-target="education">Education</a>
+      
+    
+      
+      
+        
+        <a href="#teaching" data-scroll-target="teaching">Teaching</a>
+      
+    
+      
+      
+        
+        <a href="#talks" data-scroll-target="talks">Talks</a>
+      
+    
+      
+      
+        
+        <a href="#service" data-scroll-target="service">Service</a>
+      
+    
+  </nav>
+
+  <button class="theme-toggle academic-navbar__theme" accesskey="t" aria-label="Display preferences">
+    <svg class="dark:hidden" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <svg class="dark:block [&:not(dark)]:hidden" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </button>
+</header>
+
+<script>
+  (function () {
+    function scrollToSection(id, updateHash) {
+      var target = document.getElementById(id);
+      if (!target) return;
+
+      var header = document.querySelector('.academic-navbar');
+      var headerHeight = header ? header.getBoundingClientRect().height : 0;
+      var top = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 12;
+
+      window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+
+      if (updateHash && window.location.hash !== '#' + id) {
+        history.pushState(null, '', '#' + id);
+      }
+    }
+
+    document.addEventListener('click', function (event) {
+      var link = event.target.closest('.academic-navbar__links a[data-scroll-target]');
+      if (!link) return;
+
+      event.preventDefault();
+      scrollToSection(link.getAttribute('data-scroll-target'), true);
+    });
+
+    window.addEventListener('load', function () {
+      if (window.location.hash.length > 1) {
+        window.requestAnimationFrame(function () {
+          scrollToSection(window.location.hash.slice(1), false);
+        });
+      }
+    });
+  })();
+</script>
 
         
       
@@ -418,9 +563,6 @@
 
 
   
-    
-    
-    
   
 
 
@@ -451,7 +593,7 @@
 
 
 
-<section id="section-resume-biography" class="relative hbb-section blox-resume-biography  " style="padding: 4rem 0 4rem 0;" >
+<section id="section-resume-biography" class="relative hbb-section blox-resume-biography  " style="padding: 3rem 0 2rem 0;" >
  <div class="home-section-bg " >
    
  </div>
@@ -619,7 +761,7 @@
       
     
     <li>
-      <a href="/uploads/resume.pdf" target="_blank" rel="noopener" aria-label="academicons/cv"
+      <a href="/uploads/resume_06_26.pdf" target="_blank" rel="noopener" aria-label="academicons/cv"
           data-toggle="tooltip" data-placement="top" title="Download My CV">
         <svg style="height: 1.5rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M249.18 328.324c-9.788 15.384-19.179 30.434-40.222 45.055c-11.256 7.89-37.164 23.306-73.99 23.306C64.709 396.685 8 345.605 8 255.801c0-78.486 53.345-140.486 128.466-140.486c30.434 0 57.474 10.521 77.387 26.304c18.414 14.65 27.038 29.304 34.563 42.456l-52.58 26.273c-3.762-8.626-8.29-17.649-19.913-27.406c-12.784-10.155-25.54-13.152-36.46-13.152c-42.821 0-65.364 39.825-65.364 84.145c0 58.238 29.7 87.143 65.364 87.143c34.563 0 48.48-24.042 57.474-39.426l52.243 26.673zm184.194-204.75H504l-92.037 265.22h-67.597l-90.904-265.22h70.625l54.843 188.6z"/></svg>
       </a>
@@ -630,7 +772,8 @@
   
   <div class="pt-2 d-flex justify-content-center prose prose-slate lg:prose-xl dark:prose-invert">
     <div class="bio-text" style="text-align: justify; font-size: 0.8em;">
-      <p>I am a Ph.D. student in Computer Science at Yale University, advised by <a href="https://www.fanzhang.me/" target="_blank" rel="noopener">Prof. Fan Zhang</a>. My research focuses on cryptography for decentralized systems with privacy and transparency guarantees.</p>
+      <p>I am a Ph.D. student in Computer Science at Yale University, advised by <a href="https://www.fanzhang.me/" target="_blank" rel="noopener">Prof. Fan Zhang</a>. Before that, I obtained my Bachelor&rsquo;s and MEng degrees in Computer Science from MIT.</p>
+<p>My research focuses on cryptography for decentralized systems with privacy and transparency guarantees.</p>
 
     </div>
   </div>
@@ -699,9 +842,6 @@
 
 
   
-    
-    
-    
   
 
 
@@ -732,7 +872,302 @@
 
 
 
-<section id="section-resume-experience" class="relative hbb-section blox-resume-experience  " style="padding: 4rem 0 4rem 0;" >
+<section id="publications" class="relative hbb-section blox-publications  " style="padding: 2rem 0 2rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+<div class="mx-auto flex max-w-prose flex-col px-6 sm:px-0">
+  <div class="mb-8">
+    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Publications &amp; Manuscripts</h2>
+    
+  </div>
+
+  <div class="divide-y divide-gray-200 dark:divide-gray-700">
+    
+      
+      <article class="py-5">
+        <div class="min-w-0">
+          
+          <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">
+            
+              <a class="hover:text-primary-700 dark:hover:text-primary-300" href="https://eprint.iacr.org/2026/126" target="_blank" rel="noopener">Censorship Resistance vs Throughput in Multi-Proposer BFT Protocols</a>
+            
+          </h3>
+
+          <div class="mt-1 text-sm leading-6 text-gray-700 dark:text-gray-300">
+            Fatima Elsheimy, <strong>Ioannis Kaklamanis</strong>, Sarisht Wadhwa, Charalampos Papamanthou, and Fan Zhang.
+            
+              <span class="text-gray-500 dark:text-gray-400"> In submission.</span>
+            
+          </div>
+
+          
+
+          
+            <div class="mt-3 flex flex-wrap gap-2 text-sm">
+              
+                
+                
+                <a class="inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-semibold leading-none transition border-gray-200 bg-white text-gray-800 hover:border-primary-200 hover:bg-primary-50 hover:text-primary-800 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:border-primary-700 dark:hover:bg-primary-950 dark:hover:text-primary-200" href="https://eprint.iacr.org/2026/126" target="_blank" rel="noopener">
+                  <svg class="h-4 w-4 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9"/></svg>
+                  <span>eprint</span>
+                </a>
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      <article class="py-5">
+        <div class="min-w-0">
+          
+          <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">
+            
+              <a class="hover:text-primary-700 dark:hover:text-primary-300" href="https://eprint.iacr.org/2025/2330" target="_blank" rel="noopener">Verifiable Aggregate Receipts with Applications to User Engagement Auditing</a>
+            
+          </h3>
+
+          <div class="mt-1 text-sm leading-6 text-gray-700 dark:text-gray-300">
+            <strong>Ioannis Kaklamanis</strong>, Wenhao Wang, Harjasleen Malvai, and Fan Zhang.
+            
+              <span class="text-gray-500 dark:text-gray-400"> In submission.</span>
+            
+          </div>
+
+          
+
+          
+            <div class="mt-3 flex flex-wrap gap-2 text-sm">
+              
+                
+                
+                <a class="inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-semibold leading-none transition border-gray-200 bg-white text-gray-800 hover:border-primary-200 hover:bg-primary-50 hover:text-primary-800 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:border-primary-700 dark:hover:bg-primary-950 dark:hover:text-primary-200" href="https://eprint.iacr.org/2025/2330" target="_blank" rel="noopener">
+                  <svg class="h-4 w-4 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9"/></svg>
+                  <span>eprint</span>
+                </a>
+              
+                
+                
+                <a class="inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-semibold leading-none transition border-emerald-200 bg-emerald-50 text-emerald-800 hover:border-emerald-300 hover:bg-emerald-100 dark:border-emerald-800 dark:bg-emerald-950 dark:text-emerald-200 dark:hover:bg-emerald-900" href="https://var.hackingdecentralized.com/" target="_blank" rel="noopener">
+                  <svg class="h-4 w-4 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m2.25 12l8.955-8.955a1.124 1.124 0 0 1 1.59 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>
+                  <span>Project Homepage</span>
+                </a>
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      <article class="py-5">
+        <div class="min-w-0">
+          
+          <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">
+            
+              <a class="hover:text-primary-700 dark:hover:text-primary-300" href="https://eprint.iacr.org/2025/618" target="_blank" rel="noopener">Anonymous Self-Credentials and their Application to Single-Sign-On</a>
+            
+          </h3>
+
+          <div class="mt-1 text-sm leading-6 text-gray-700 dark:text-gray-300">
+            Jayamine Alupotha, Mariarosaria Barbaraci, <strong>Ioannis Kaklamanis</strong>, Abhimanyu Rawat, Christian Cachin, and Fan Zhang.
+            
+              <span class="text-gray-500 dark:text-gray-400"> In submission.</span>
+            
+          </div>
+
+          
+
+          
+            <div class="mt-3 flex flex-wrap gap-2 text-sm">
+              
+                
+                
+                <a class="inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-semibold leading-none transition border-gray-200 bg-white text-gray-800 hover:border-primary-200 hover:bg-primary-50 hover:text-primary-800 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:border-primary-700 dark:hover:bg-primary-950 dark:hover:text-primary-200" href="https://eprint.iacr.org/2025/618" target="_blank" rel="noopener">
+                  <svg class="h-4 w-4 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9"/></svg>
+                  <span>eprint</span>
+                </a>
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      <article class="py-5">
+        <div class="min-w-0">
+          
+          <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">
+            
+              <a class="hover:text-primary-700 dark:hover:text-primary-300" href="https://arxiv.org/abs/2502.04659" target="_blank" rel="noopener">CRATE: Cross-Rollup Atomic Transaction Execution</a>
+            
+          </h3>
+
+          <div class="mt-1 text-sm leading-6 text-gray-700 dark:text-gray-300">
+            <strong>Ioannis Kaklamanis</strong> and Fan Zhang.
+            
+              <span class="text-gray-500 dark:text-gray-400"> In submission.</span>
+            
+          </div>
+
+          
+
+          
+            <div class="mt-3 flex flex-wrap gap-2 text-sm">
+              
+                
+                
+                <a class="inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-semibold leading-none transition border-gray-200 bg-white text-gray-800 hover:border-primary-200 hover:bg-primary-50 hover:text-primary-800 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:border-primary-700 dark:hover:bg-primary-950 dark:hover:text-primary-200" href="https://arxiv.org/abs/2502.04659" target="_blank" rel="noopener">
+                  <svg class="h-4 w-4 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9"/></svg>
+                  <span>arXiv</span>
+                </a>
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      <article class="py-5">
+        <div class="min-w-0">
+          
+          <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">
+            
+              <a class="hover:text-primary-700 dark:hover:text-primary-300" href="https://doi.org/10.1145/3548606.3563494" target="_blank" rel="noopener">Poster: Coded Broadcast for Scalable Leader-Based BFT Consensus</a>
+            
+          </h3>
+
+          <div class="mt-1 text-sm leading-6 text-gray-700 dark:text-gray-300">
+            <strong>Ioannis Kaklamanis</strong>, Lei Yang, and Mohammad Alizadeh.
+            
+          </div>
+
+          
+            <div class="mt-1 text-sm leading-6 text-gray-500 dark:text-gray-400">
+              <span class="font-medium text-gray-600 dark:text-gray-300">CCS 2022.</span>
+               ACM SIGSAC Conference on Computer and Communications Security (CCS &lsquo;22), 3375-3377.
+            </div>
+          
+
+          
+            <div class="mt-3 flex flex-wrap gap-2 text-sm">
+              
+                
+                
+                <a class="inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-semibold leading-none transition border-gray-200 bg-white text-gray-800 hover:border-primary-200 hover:bg-primary-50 hover:text-primary-800 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:border-primary-700 dark:hover:bg-primary-950 dark:hover:text-primary-200" href="https://doi.org/10.1145/3548606.3563494" target="_blank" rel="noopener">
+                  <svg class="h-4 w-4 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9"/></svg>
+                  <span>ACM</span>
+                </a>
+              
+            </div>
+          
+        </div>
+      </article>
+    
+  </div>
+</div>
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="education" class="relative hbb-section blox-resume-experience  " style="padding: 3rem 0 2rem 0;" >
  <div class="home-section-bg " >
    
  </div>
@@ -762,8 +1197,37 @@
 
 
 
-<div class="flex flex-col lg:gap-x-6 w-100 px-6 sm:px-0 ">
+<div class="flex flex-col lg:gap-x-6 w-100 px-6 sm:px-0 flex-col-reverse">
 
+
+<div class="w-full">
+  <h3 class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">Experience</h3>
+  <ol class="relative border-s border-gray-200 dark:border-gray-700">
+    
+    <li class="mb-10 ms-6">
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path></svg>
+        </span>
+      <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap">Research Intern
+        
+      </h3>
+      <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">Chainlink Labs</span>
+      <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+        
+          June 2025 –
+        
+        
+          October 2025
+        
+      </time>
+      <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert"></div>
+
+      
+
+    </li>
+    
+  </ol>
+</div>
 
 
 
@@ -856,6 +1320,420 @@
 
   
 
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="teaching" class="relative hbb-section blox-cv-list  " style="padding: 1rem 0 2rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+<div class="mx-auto flex max-w-prose flex-col px-6 sm:px-0">
+  <h2 class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">Teaching</h2>
+
+  <div class="space-y-5">
+    
+      <article>
+        
+          <div class="text-sm leading-6 text-gray-700 dark:text-gray-300">
+            <span class="font-semibold text-gray-900 dark:text-white">Teaching Fellow</span>,
+            <span class="italic">January-May 2025</span>,
+            Cryptography (CPSC 467), Yale University.
+          </div>
+        
+      </article>
+    
+      <article>
+        
+          <div class="text-sm leading-6 text-gray-700 dark:text-gray-300">
+            <span class="font-semibold text-gray-900 dark:text-white">Teaching Fellow</span>,
+            <span class="italic">September-December 2023</span>,
+            Blockchains (CPSC 364), Yale University.
+          </div>
+        
+      </article>
+    
+      <article>
+        
+          <div class="text-sm leading-6 text-gray-700 dark:text-gray-300">
+            <span class="font-semibold text-gray-900 dark:text-white">Teaching Assistant</span>,
+            <span class="italic">January-May 2023</span>,
+            Mathematics for Computer Science, Massachusetts Institute of Technology.
+          </div>
+        
+      </article>
+    
+      <article>
+        
+          <div class="text-sm leading-6 text-gray-700 dark:text-gray-300">
+            <span class="font-semibold text-gray-900 dark:text-white">Teaching Assistant</span>,
+            <span class="italic">September 2021-May 2022</span>,
+            Mathematics for Computer Science, Massachusetts Institute of Technology.
+          </div>
+        
+      </article>
+    
+  </div>
+</div>
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="talks" class="relative hbb-section blox-cv-list  " style="padding: 1rem 0 2rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+<div class="mx-auto flex max-w-prose flex-col px-6 sm:px-0">
+  <h2 class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">Talks</h2>
+
+  <div class="space-y-5">
+    
+      <article>
+        
+          <div class="text-sm leading-6 text-gray-700 dark:text-gray-300">
+            <a class="font-semibold text-gray-900 hover:text-primary-700 dark:text-white dark:hover:text-primary-300" href="https://nesd.cs.umass.edu/" target="_blank" rel="noopener">New England Security Day (NESD)</a>,
+            <span class="italic">March 2026</span>,
+            "Verifiable Aggregate Receipts with Applications to User Engagement Auditing", UMass Amherst.
+          </div>
+        
+      </article>
+    
+      <article>
+        
+          <div class="text-sm leading-6 text-gray-700 dark:text-gray-300">
+            <a class="font-semibold text-gray-900 hover:text-primary-700 dark:text-white dark:hover:text-primary-300" href="https://ic3research.org/ic3-winter-retreat-2026/" target="_blank" rel="noopener">IC3 Winter Retreat</a>,
+            <span class="italic">January 2026</span>,
+            "Verifiable Aggregate Receipts with Applications to User Engagement Auditing", Engelberg, Switzerland.
+          </div>
+        
+      </article>
+    
+  </div>
+</div>
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="service" class="relative hbb-section blox-cv-list  " style="padding: 1rem 0 2rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+<div class="mx-auto flex max-w-prose flex-col px-6 sm:px-0">
+  <h2 class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">Academic Service</h2>
+
+  <div class="space-y-5">
+    
+      <article>
+        
+          <div class="text-base leading-7 text-gray-700 dark:text-gray-300">
+            <span class="font-semibold text-gray-900 dark:text-white">Sub-reviewer</span>
+          </div>
+          <ul class="mt-2 list-disc space-y-2 text-sm leading-6 text-gray-600 dark:text-gray-300" style="padding-left: 3.5rem;">
+            
+              <li>ASIACRYPT 2024</li>
+            
+              <li>USENIX 2025</li>
+            
+              <li>TCC 2025</li>
+            
+              <li>EUROCRYPT 2026</li>
+            
+              <li>CRYPTO 2026</li>
+            
+          </ul>
+        
+      </article>
+    
+  </div>
+</div>
+
+
+  
+
+  
+</section>
+
+  
+
 
     </div>
     <div class="page-footer">
@@ -909,7 +1787,7 @@
 
   
   <p class="powered-by text-center">
-    © 2025 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+    © 2026 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
   </p>
   
 

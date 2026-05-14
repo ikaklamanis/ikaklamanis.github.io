@@ -1,0 +1,7 @@
+- role: Sub-reviewer
+  venues:
+    - ASIACRYPT 2024
+    - USENIX 2025
+    - TCC 2025
+    - EUROCRYPT 2026
+    - CRYPTO 2026

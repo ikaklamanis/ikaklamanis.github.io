@@ -1,0 +1,43 @@
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $source := $block.content.source }}
+{{ $items := index site.Data $source | default slice }}
+{{ $title := $block.content.title | default (title $source) }}
+
+<div class="mx-auto flex max-w-prose flex-col px-6 sm:px-0">
+  <h2 class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">{{ $title | $page.RenderString }}</h2>
+
+  <div class="space-y-5">
+    {{ range $items }}
+      <article>
+        {{ if .course }}
+          <div class="text-sm leading-6 text-gray-700 dark:text-gray-300">
+            <span class="font-semibold text-gray-900 dark:text-white">{{ .role }}</span>,
+            <span class="italic">{{ .dates }}</span>,
+            {{ .course }}, {{ .institution }}.
+          </div>
+        {{ else if .event }}
+          <div class="text-sm leading-6 text-gray-700 dark:text-gray-300">
+            <a class="font-semibold text-gray-900 hover:text-primary-700 dark:text-white dark:hover:text-primary-300" href="{{ .url }}" target="_blank" rel="noopener">{{ .event }}</a>,
+            <span class="italic">{{ .date }}</span>,
+            "{{ .title }}", {{ .location }}.
+          </div>
+        {{ else if .venues }}
+          <div class="text-base leading-7 text-gray-700 dark:text-gray-300">
+            <span class="font-semibold text-gray-900 dark:text-white">{{ .role }}</span>
+          </div>
+          <ul class="mt-2 list-disc space-y-2 text-sm leading-6 text-gray-600 dark:text-gray-300" style="padding-left: 3.5rem;">
+            {{ range .venues }}
+              <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        {{ else }}
+          <div class="flex flex-wrap items-baseline gap-x-2">
+            <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">{{ .role }}</h3>
+            <span class="text-sm leading-6 text-gray-600 dark:text-gray-300">{{ .venue }}.</span>
+          </div>
+        {{ end }}
+      </article>
+    {{ end }}
+  </div>
+</div>
