@@ -39,7 +39,7 @@ profiles:
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=PRiIKjUAAAAJ&hl=en
   - icon: academicons/cv
-    url: uploads/resume_06_26.pdf
+    url: uploads/resume.pdf
     label: Download My CV
 
 education:

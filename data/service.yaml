@@ -1,8 +1,8 @@
 - role: Sub-reviewer
   venues:
-    - ASIACRYPT: 2024, 2026
-    - USENIX: 2025, 2026
-    - TCC: 2025
-    - EUROCRYPT: 2026
-    - CRYPTO: 2026
-    - SODA: 2027
+    - "ASIACRYPT: 2024, 2026"
+    - "USENIX: 2025, 2026"
+    - "TCC: 2025"
+    - "EUROCRYPT: 2026"
+    - "CRYPTO: 2026"
+    - "SODA: 2027"
